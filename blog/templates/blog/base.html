@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bias Pikiran{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles-container" id="particles-js"></div>
+    <div class="content-wrapper">
+        <header>
+            <div class="logo-container">
+                <img src="{% static 'blog/images/logo.jpeg' %}" alt="Logo Bias Pikiran" class="logo">
+                <div>
+                    <h1><a href="/">Bias Pikiran</a></h1>
+                    <p class="tagline">Exploring the Mind's Bias</p>
+                </div>
+            </div>
+            <nav>
+                <a href="{% url 'home' %}"><i class="fas fa-home"></i> Beranda</a>
+                <a href="{% url 'about' %}"><i class="fas fa-user-astronaut"></i> Tentang</a>
+                <a href="{% url 'explore' %}"><i class="fas fa-rocket"></i> Eksplorasi</a>
+                <button onclick="toggleTheme()" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@bias.pikiran" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>© 2023 Bias Pikiran | Built with <i class="fas fa-heart"></i> and Django</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{% static 'blog/js/toggle.js' %}"></script>
+    <script src="{% static 'blog/js/particles.js' %}"></script>
+    <script src="{% static 'blog/js/animations.js' %}"></script>
+</body>
+</html>

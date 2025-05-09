@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<article>
+  <h2>{{ article.title }}</h2>
+  <p>{{ article.content|linebreaks }}</p>
+</article>
+
+<section>
+  <h3>Komentar</h3>
+  <ul>
+    {% for comment in comments %}
+      <li><b>{{ comment.name }}</b>: {{ comment.body }}</li>
+    {% endfor %}
+  </ul>
+
+  <h4>Tinggalkan Komentar</h4>
+  <form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+{% endblock %}

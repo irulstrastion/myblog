@@ -1,0 +1,134 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Tentang Saya{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="glowing-text">Profil Saya</h1>
+            <p class="tagline">"Pribadi yang suka belajar dan tertarik dengan banyak hal terutama di bidang teknologi"</p>
+        </div>
+        <div class="hero-image floating">
+            <img src="{% static 'blog/images/profile-pic.jpg' %}" alt="Foto Profil">
+        </div>
+    </section>
+
+    <div class="timeline-container">
+        <div class="timeline">
+            <!-- Pendidikan -->
+            <div class="timeline-section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Pendidikan</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date">1998-2004</div>
+                    <div class="timeline-content card">
+                        <h3>SD Negeri 02 Pagi Jagakarsa</h3>
+                        <p>Mengawali pendidikan dasar di lingkungan yang menyenangkan</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2004-2007</div>
+                    <div class="timeline-content card">
+                        <h3>SMP Negeri 254 Jakarta</h3>
+                        <p>Masa remaja awal dengan eksplorasi berbagai minat dan mulai tertarik lawan jenis</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2007-2010</div>
+                    <div class="timeline-content card">
+                        <h3>SMK Grafika Desa Putera</h3>
+                        <p>Fokus pada pendidikan vokasional dan keterampilan teknis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pengalaman Kerja -->
+            <div class="timeline-section">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> Pengalaman Kerja</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date">2010-2011</div>
+                    <div class="timeline-content card">
+                        <h3>Cooker Helper - Kedai Pempek Adinda</h3>
+                        <p>Belajar disiplin dan kerja di dunia kuliner</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2011-2016</div>
+                    <div class="timeline-content card">
+                        <h3>Office Boy - PT. Mitsui Leasing Capital Indonesia</h3>
+                        <p>Pengalaman pertama di dunia korporat walau hanya bagian pendukung</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2016-2017</div>
+                    <div class="timeline-content card">
+                        <h3>General Affairs Support - PT. Mitsui Leasing Capital Indonesia</h3>
+                        <p>Mulai Belajar Mengembangkan keterampilan administratif</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018-2019</div>
+                    <div class="timeline-content card">
+                        <h3>Petugas Layanan Bus - PT. Transportasi Jakarta</h3>
+                        <p>Berinteraksi langsung dengan masyarakat dan ragam sifat karakter</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2019-2024</div>
+                    <div class="timeline-content card">
+                        <h3>Staff Admin - PT. Amerta Indah Otsuka</h3>
+                        <p>Terjun ke dunia FMCG sebagai Staff Admin untuk support tim sales</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="current-activities">
+        <h2 class="section-title"><i class="fas fa-rocket"></i> Kegiatan Saat Ini</h2>
+        <div class="skills-grid">
+            <div class="skill-card card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Belajar Programming</h3>
+                <p>Python, Django, JavaScript</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-card card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>Desain UI/UX</h3>
+                <p>Figma, Canva</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%"></div>
+                </div>
+            </div>
+            <div class="skill-card card">
+                <i class="fas fa-microphone"></i>
+                <h3>Public Speaking</h3>
+                <p>Belajar intonasi , artikulasi dan kebersihan suara</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 65%"></div>
+                </div>
+            </div>
+            <div class="skill-card card">
+                <i class="fab fa-youtube"></i>
+                <h3>Konten YouTube</h3>
+                <p>Channel "Bias Pikiran"</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <div class="quote-card card">
+            <i class="fas fa-quote-left"></i>
+            <p class="quote">"Seperti lagu Cold Play, 'No Body Say it was easy' jadi nikmati saja dan tetap bertanggungjawab"</p>
+            <div class="signature">- Biodata Saya</div>
+        </div>
+    </section>
+</div>
+{% endblock %}
